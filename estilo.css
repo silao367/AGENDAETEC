@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Navbar minimalista */
+.navbar {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-menu li {
+    margin-left: 20px;
+}
+
+.navbar-menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.navbar-menu a:hover {
+    background-color: #34495e;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Caixa de agenda */
+.agenda-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    padding: 25px;
+}
+
+.agenda-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.agenda-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+}
+
+.agenda-date {
+    font-size: 1rem;
+    color: #7f8c8d;
+}
+
+/* Controles da agenda */
+.agenda-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Eventos */
+.evento {
+    padding: 15px;
+    border-left: 4px solid #3498db;
+    background-color: #f9f9f9;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    transition: transform 0.2s;
+}
+
+.evento:hover {
+    transform: translateX(5px);
+}
+
+.evento-titulo {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.evento-horario {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+.evento-descricao {
+    margin-top: 8px;
+    color: #34495e;
+}
+
+/* Formulário de login */
+.login-form {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    z-index: 100;
+    width: 300px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 99;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .navbar-menu {
+        margin-top: 15px;
+    }
+    
+    .navbar-menu li {
+        margin: 0 10px;
+    }
+    
+    .agenda-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .agenda-date {
+        margin-top: 10px;
+    }
+    
+    .agenda-controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

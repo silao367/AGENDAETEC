@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="acoes.js">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Document</title>
+</head>
+<body>
+    
+      <!-- Navbar minimalista -->
+    <nav class="navbar">
+        <div class="navbar-title">Minha Agenda</div>
+        <ul class="navbar-menu">
+            <li><a href="#" id="loginLink">Login</a></li>
+            <li><a href="#" id="agendaLink">Agenda</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Container Principal -->
+    <div class="container">
+        <!-- Caixa de Agenda -->
+        <div class="agenda-box">
+            <div class="agenda-header">
+                <h2 class="agenda-title">Minha Agenda</h2>
+                <div class="agenda-date" id="data-atual">Segunda-feira, 12 de Junho de 2023</div>
+            </div>
+            
+            <div class="agenda-controls">
+                <button class="btn" id="btn-adicionar">Adicionar Evento</button>
+                <button class="btn" id="btn-hoje">Hoje</button>
+            </div>
+            
+            <div id="lista-eventos">
+                <!-- Eventos serão carregados via JavaScript -->
+            </div>
+        </div>
+    </div>
+    
+    <!-- Overlay para o formulário -->
+    <div class="overlay" id="overlay"></div>
+    
+    <!-- Formulário de Login -->
+    <div class="login-form" id="loginForm">
+        <h3 style="margin-bottom: 20px; text-align: center;">Login</h3>
+        <div class="form-group">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" placeholder="Seu e-mail">
+        </div>
+        <div class="form-group">
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" placeholder="Sua senha">
+        </div>
+        <button class="btn" style="width: 100%;" id="btn-login">Entrar</button>
+        <p style="text-align: center; margin-top: 15px; font-size: 0.9rem;">
+            <a href="#" style="color: #3498db;">Criar conta</a>
+        </p>
+    </div>
+
+
+</body>
+</html>
