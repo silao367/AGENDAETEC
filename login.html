@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Agenda de Salas - ETEC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .header {
+            background-color: #ff0000;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .login-container {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border: 3px solid #ff0000;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(255,0,0,0.2);
+        }
+        
+        h2 {
+            color: #ff0000;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            color: #ff0000;
+            font-weight: bold;
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        
+        input[type="text"],
+        input[type="password"] {
+            padding: 12px;
+            border: 2px solid #ff0000;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-color: #cc0000;
+            box-shadow: 0 0 5px rgba(255,0,0,0.5);
+        }
+        
+        button {
+            background-color: #ff0000;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+        }
+        
+        button:hover {
+            background-color: #cc0000;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #ff0000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Agenda de Salas ETEC</h1>
+    </div>
+    
+    <div class="login-container">
+        <h2>Login</h2>
+        <form method="POST" action="login.php">
+            <label>Usuário:</label>
+            <input type="text" name="username" required>
+            
+            <label>Senha:</label>
+            <input type="password" name="senha" required>
+            
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    
+    <div class="footer">
+        <p>ETEC - Sistema de Agenda de Salas</p>
+    </div>
+</body>
+</html>
